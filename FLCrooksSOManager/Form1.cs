@@ -1,10 +1,25 @@
 namespace FLCrooksSOManager
 {
-    public partial class Form1 : Form
+    public partial class mainForm : Form
     {
-        public Form1()
+        public mainForm()
         {
             InitializeComponent();
+        }
+
+        private void settingsIcon_Click(object sender, EventArgs e)
+        {
+            new settingsForm().ShowDialog();
+        }
+
+        private void newOrderBtn_Click(object sender, EventArgs e)
+        {
+            new newOrderForm().Show();
+        }
+
+        private void manageBtn_Click(object sender, EventArgs e)
+        {
+            new manageForm().Show();
         }
     }
 }
