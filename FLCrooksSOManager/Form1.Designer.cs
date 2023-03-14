@@ -41,7 +41,7 @@
             // 
             mainPageLabel.AutoSize = true;
             mainPageLabel.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            mainPageLabel.Location = new Point(224, 169);
+            mainPageLabel.Location = new Point(216, 169);
             mainPageLabel.Name = "mainPageLabel";
             mainPageLabel.Size = new Size(375, 26);
             mainPageLabel.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             flcrooksLogo.BackColor = SystemColors.Control;
             flcrooksLogo.Image = Properties.Resources.R;
-            flcrooksLogo.Location = new Point(224, 12);
+            flcrooksLogo.Location = new Point(216, 12);
             flcrooksLogo.Name = "flcrooksLogo";
             flcrooksLogo.Size = new Size(372, 154);
             flcrooksLogo.SizeMode = PictureBoxSizeMode.Zoom;
@@ -74,7 +74,7 @@
             // 
             newOrderBtn.Cursor = Cursors.Hand;
             newOrderBtn.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            newOrderBtn.Location = new Point(131, 250);
+            newOrderBtn.Location = new Point(83, 250);
             newOrderBtn.Name = "newOrderBtn";
             newOrderBtn.Size = new Size(179, 94);
             newOrderBtn.TabIndex = 3;
@@ -86,7 +86,7 @@
             // 
             manageBtn.Cursor = Cursors.Hand;
             manageBtn.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            manageBtn.Location = new Point(502, 250);
+            manageBtn.Location = new Point(547, 250);
             manageBtn.Name = "manageBtn";
             manageBtn.Size = new Size(179, 94);
             manageBtn.TabIndex = 4;
