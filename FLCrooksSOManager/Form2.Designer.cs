@@ -104,7 +104,7 @@
             // updateBtn
             // 
             updateBtn.Enabled = false;
-            updateBtn.Location = new Point(129, 227);
+            updateBtn.Location = new Point(129, 211);
             updateBtn.Name = "updateBtn";
             updateBtn.Size = new Size(75, 23);
             updateBtn.TabIndex = 2;

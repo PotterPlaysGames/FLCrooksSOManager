@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             mainPageLabel = new Label();
             flcrooksLogo = new PictureBox();
             settingsIcon = new PictureBox();
@@ -61,6 +62,7 @@
             // settingsIcon
             // 
             settingsIcon.Cursor = Cursors.Hand;
+            settingsIcon.Enabled = false;
             settingsIcon.Image = Properties.Resources.cogwheel_configuration_options_parameters_properties_settings_1320165735121041526;
             settingsIcon.Location = new Point(731, 388);
             settingsIcon.Name = "settingsIcon";
@@ -68,6 +70,7 @@
             settingsIcon.SizeMode = PictureBoxSizeMode.Zoom;
             settingsIcon.TabIndex = 2;
             settingsIcon.TabStop = false;
+            settingsIcon.Visible = false;
             settingsIcon.Click += settingsIcon_Click;
             // 
             // newOrderBtn
@@ -106,6 +109,7 @@
             Controls.Add(flcrooksLogo);
             Controls.Add(mainPageLabel);
             Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
             Name = "mainForm";
             Text = "F.L. Crooks S.O.M.S";
