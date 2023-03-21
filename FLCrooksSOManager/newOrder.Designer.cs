@@ -51,6 +51,8 @@
             priceLbl = new Label();
             Cancel = new Button();
             createOrder = new Button();
+            label2 = new Label();
+            label3 = new Label();
             custInfo.SuspendLayout();
             servicesAndDesc.SuspendLayout();
             orderInfo.SuspendLayout();
@@ -93,9 +95,9 @@
             pNumberLbl.AutoSize = true;
             pNumberLbl.Location = new Point(92, 85);
             pNumberLbl.Name = "pNumberLbl";
-            pNumberLbl.Size = new Size(91, 15);
+            pNumberLbl.Size = new Size(96, 15);
             pNumberLbl.TabIndex = 4;
-            pNumberLbl.Text = "Phone Number:";
+            pNumberLbl.Text = "*Phone Number:";
             // 
             // lNameTxtBox
             // 
@@ -109,9 +111,9 @@
             lNameLbl.AutoSize = true;
             lNameLbl.Location = new Point(198, 31);
             lNameLbl.Name = "lNameLbl";
-            lNameLbl.Size = new Size(66, 15);
+            lNameLbl.Size = new Size(71, 15);
             lNameLbl.TabIndex = 2;
-            lNameLbl.Text = "Last Name:";
+            lNameLbl.Text = "*Last Name:";
             // 
             // fNameTxtBox
             // 
@@ -125,9 +127,9 @@
             fNameLbl.AutoSize = true;
             fNameLbl.Location = new Point(19, 31);
             fNameLbl.Name = "fNameLbl";
-            fNameLbl.Size = new Size(67, 15);
+            fNameLbl.Size = new Size(72, 15);
             fNameLbl.TabIndex = 0;
-            fNameLbl.Text = "First Name:";
+            fNameLbl.Text = "*First Name:";
             // 
             // servicesAndDesc
             // 
@@ -139,7 +141,7 @@
             servicesAndDesc.Size = new Size(398, 186);
             servicesAndDesc.TabIndex = 1;
             servicesAndDesc.TabStop = false;
-            servicesAndDesc.Text = "Description";
+            servicesAndDesc.Text = "*Description";
             // 
             // descLbl2
             // 
@@ -207,7 +209,7 @@
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(200, 23);
             dateTimePicker1.TabIndex = 3;
-            dateTimePicker1.Value = new DateTime(2023, 3, 21, 0, 0, 0, 0);
+            dateTimePicker1.Value = new DateTime(2023, 3, 21, 15, 59, 27, 0);
             // 
             // paidCheck
             // 
@@ -256,12 +258,35 @@
             createOrder.UseVisualStyleBackColor = true;
             createOrder.Click += createOrder_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Times New Roman", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label2.ForeColor = Color.DarkRed;
+            label2.Location = new Point(572, 277);
+            label2.Name = "label2";
+            label2.Size = new Size(101, 19);
+            label2.TabIndex = 5;
+            label2.Text = "REMINDER:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(466, 307);
+            label3.Name = "label3";
+            label3.Size = new Size(322, 15);
+            label3.TabIndex = 6;
+            label3.Text = "All items with an \" * \" next to is required to create an order!";
+            // 
             // newOrderForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(800, 450);
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(createOrder);
             Controls.Add(Cancel);
             Controls.Add(orderInfo);
@@ -278,6 +303,7 @@
             orderInfo.ResumeLayout(false);
             orderInfo.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -303,5 +329,7 @@
         private CheckBox orderPlacedCheck;
         private Button Cancel;
         private Button createOrder;
+        private Label label2;
+        private Label label3;
     }
 }
