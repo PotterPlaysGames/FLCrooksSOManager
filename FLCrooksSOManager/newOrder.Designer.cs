@@ -207,6 +207,7 @@
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(200, 23);
             dateTimePicker1.TabIndex = 3;
+            dateTimePicker1.Value = new DateTime(2023, 3, 21, 0, 0, 0, 0);
             // 
             // paidCheck
             // 
@@ -243,6 +244,7 @@
             Cancel.TabIndex = 3;
             Cancel.Text = "Cancel";
             Cancel.UseVisualStyleBackColor = true;
+            Cancel.Click += Cancel_Click;
             // 
             // createOrder
             // 
@@ -268,6 +270,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "newOrderForm";
             Text = "New Order";
+            Load += newOrderForm_Load;
             custInfo.ResumeLayout(false);
             custInfo.PerformLayout();
             servicesAndDesc.ResumeLayout(false);
