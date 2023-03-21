@@ -14,6 +14,7 @@ namespace FLCrooksSOManager
 
         private void newOrderBtn_Click(object sender, EventArgs e)
         {
+            this.Hide();
             new newOrderForm().Show();
         }
 
