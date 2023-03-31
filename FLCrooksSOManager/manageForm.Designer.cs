@@ -29,117 +29,107 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(manageForm));
-            orderList = new ListView();
-            id = new ColumnHeader();
-            fNameColomn = new ColumnHeader();
-            lNameColumn = new ColumnHeader();
-            pNumColumn = new ColumnHeader();
-            priceColumn = new ColumnHeader();
-            paidColumn = new ColumnHeader();
-            dateColumn = new ColumnHeader();
-            placedColumn = new ColumnHeader();
-            refreshList = new Button();
             newOrderBtnMgr = new Button();
             editBtn = new Button();
+            listView1 = new ListView();
+            ID = new ColumnHeader();
+            FirstName = new ColumnHeader();
+            LastName = new ColumnHeader();
+            PhoneNumber = new ColumnHeader();
+            Price = new ColumnHeader();
+            DatePlaced = new ColumnHeader();
+            Paid = new ColumnHeader();
+            Placed = new ColumnHeader();
             SuspendLayout();
-            // 
-            // orderList
-            // 
-            orderList.Columns.AddRange(new ColumnHeader[] { id, fNameColomn, lNameColumn, pNumColumn, priceColumn, paidColumn, dateColumn, placedColumn });
-            orderList.FullRowSelect = true;
-            orderList.GridLines = true;
-            orderList.Location = new Point(12, 80);
-            orderList.Name = "orderList";
-            orderList.Size = new Size(776, 308);
-            orderList.TabIndex = 0;
-            orderList.UseCompatibleStateImageBehavior = false;
-            orderList.View = View.Details;
-            // 
-            // id
-            // 
-            id.Text = "ID:";
-            id.Width = 30;
-            // 
-            // fNameColomn
-            // 
-            fNameColomn.Text = "First Name:";
-            fNameColomn.TextAlign = HorizontalAlignment.Center;
-            fNameColomn.Width = 120;
-            // 
-            // lNameColumn
-            // 
-            lNameColumn.Text = "Last Name:";
-            lNameColumn.TextAlign = HorizontalAlignment.Center;
-            lNameColumn.Width = 120;
-            // 
-            // pNumColumn
-            // 
-            pNumColumn.Text = "Phone Number:";
-            pNumColumn.TextAlign = HorizontalAlignment.Center;
-            pNumColumn.Width = 100;
-            // 
-            // priceColumn
-            // 
-            priceColumn.Text = "Price ($):";
-            priceColumn.TextAlign = HorizontalAlignment.Center;
-            priceColumn.Width = 100;
-            // 
-            // paidColumn
-            // 
-            paidColumn.Text = "Paid?";
-            paidColumn.TextAlign = HorizontalAlignment.Center;
-            paidColumn.Width = 50;
-            // 
-            // dateColumn
-            // 
-            dateColumn.Text = "Date Placed:";
-            dateColumn.TextAlign = HorizontalAlignment.Center;
-            dateColumn.Width = 150;
-            // 
-            // placedColumn
-            // 
-            placedColumn.Text = "Order Placed?";
-            placedColumn.TextAlign = HorizontalAlignment.Center;
-            placedColumn.Width = 100;
-            // 
-            // refreshList
-            // 
-            refreshList.Location = new Point(12, 39);
-            refreshList.Name = "refreshList";
-            refreshList.Size = new Size(112, 35);
-            refreshList.TabIndex = 1;
-            refreshList.Text = "Refresh";
-            refreshList.UseVisualStyleBackColor = true;
             // 
             // newOrderBtnMgr
             // 
-            newOrderBtnMgr.Location = new Point(676, 39);
+            newOrderBtnMgr.Location = new Point(633, 39);
             newOrderBtnMgr.Name = "newOrderBtnMgr";
             newOrderBtnMgr.Size = new Size(112, 35);
             newOrderBtnMgr.TabIndex = 2;
             newOrderBtnMgr.Text = "New Order";
             newOrderBtnMgr.UseVisualStyleBackColor = true;
+            newOrderBtnMgr.Click += newOrderBtnMgr_Click;
             // 
             // editBtn
             // 
             editBtn.Enabled = false;
-            editBtn.Location = new Point(676, 394);
+            editBtn.Location = new Point(633, 383);
             editBtn.Name = "editBtn";
             editBtn.Size = new Size(112, 35);
             editBtn.TabIndex = 3;
             editBtn.Text = "Edit Order";
             editBtn.UseVisualStyleBackColor = true;
+            editBtn.Click += editBtn_Click;
+            // 
+            // listView1
+            // 
+            listView1.Columns.AddRange(new ColumnHeader[] { ID, FirstName, LastName, PhoneNumber, Price, DatePlaced, Paid, Placed });
+            listView1.FullRowSelect = true;
+            listView1.Location = new Point(12, 80);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(733, 297);
+            listView1.TabIndex = 4;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = View.Details;
+            listView1.ColumnClick += listView1_ColumnClick;
+            listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
+            // 
+            // ID
+            // 
+            ID.Text = "ID";
+            ID.Width = 30;
+            // 
+            // FirstName
+            // 
+            FirstName.Text = "First Name";
+            FirstName.TextAlign = HorizontalAlignment.Center;
+            FirstName.Width = 120;
+            // 
+            // LastName
+            // 
+            LastName.Text = "Last Name";
+            LastName.TextAlign = HorizontalAlignment.Center;
+            LastName.Width = 120;
+            // 
+            // PhoneNumber
+            // 
+            PhoneNumber.Text = "Phone Number";
+            PhoneNumber.TextAlign = HorizontalAlignment.Center;
+            PhoneNumber.Width = 110;
+            // 
+            // Price
+            // 
+            Price.Text = "Price";
+            Price.TextAlign = HorizontalAlignment.Center;
+            // 
+            // DatePlaced
+            // 
+            DatePlaced.Text = "Date Added";
+            DatePlaced.TextAlign = HorizontalAlignment.Center;
+            DatePlaced.Width = 120;
+            // 
+            // Paid
+            // 
+            Paid.Text = "Paid?";
+            Paid.TextAlign = HorizontalAlignment.Center;
+            // 
+            // Placed
+            // 
+            Placed.Text = "Order Placed?";
+            Placed.TextAlign = HorizontalAlignment.Center;
+            Placed.Width = 100;
             // 
             // manageForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(754, 442);
+            Controls.Add(listView1);
             Controls.Add(editBtn);
             Controls.Add(newOrderBtnMgr);
-            Controls.Add(refreshList);
-            Controls.Add(orderList);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "manageForm";
             Text = "Manage";
@@ -148,18 +138,16 @@
         }
 
         #endregion
-
-        private ListView orderList;
-        private ColumnHeader id;
-        private ColumnHeader fNameColomn;
-        private ColumnHeader lNameColumn;
-        private ColumnHeader pNumColumn;
-        private ColumnHeader priceColumn;
-        private ColumnHeader paidColumn;
-        private ColumnHeader dateColumn;
-        private ColumnHeader placedColumn;
-        private Button refreshList;
         private Button newOrderBtnMgr;
         private Button editBtn;
+        private ListView listView1;
+        private ColumnHeader ID;
+        private ColumnHeader FirstName;
+        private ColumnHeader LastName;
+        private ColumnHeader PhoneNumber;
+        private ColumnHeader Price;
+        private ColumnHeader DatePlaced;
+        private ColumnHeader Placed;
+        private ColumnHeader Paid;
     }
 }
