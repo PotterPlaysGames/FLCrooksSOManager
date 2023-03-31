@@ -64,7 +64,7 @@ namespace FLCrooksSOManager
 
         private void createOrder_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(fNameTxtBox.Text) && !String.IsNullOrEmpty(lNameTxtBox.Text) && !String.IsNullOrEmpty(pNumberTxtBox.Text) && !String.IsNullOrEmpty(descBox.Text))
+            if (!String.IsNullOrEmpty(fNameTxtBox.Text) && !String.IsNullOrEmpty(lNameTxtBox.Text) && !String.IsNullOrEmpty(pNumberTxtBox.Text) && !String.IsNullOrEmpty(descBox.Text) && !String.IsNullOrEmpty(priceTxtBox.Text))
             {
                 CreateFile();
                 DialogResult anotherOrderAnswer = MessageBox.Show("Would you like to create another order?", "Next Order", MessageBoxButtons.YesNo);
@@ -87,7 +87,7 @@ namespace FLCrooksSOManager
             }
             else
             {
-                MessageBox.Show("You must enter a first name, last name, Phone  number, and a breif description of the order!");
+                MessageBox.Show("You must enter a first name, last name, Phone  number, Price, and a breif description of the order!");
             }
         }
 
@@ -97,6 +97,11 @@ namespace FLCrooksSOManager
         }
 
         private void newOrderForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void descLbl2_Click(object sender, EventArgs e)
         {
 
         }

@@ -146,11 +146,12 @@
             // descLbl2
             // 
             descLbl2.AutoSize = true;
-            descLbl2.Location = new Point(104, 34);
+            descLbl2.Location = new Point(56, 33);
             descLbl2.Name = "descLbl2";
-            descLbl2.Size = new Size(184, 15);
+            descLbl2.Size = new Size(291, 15);
             descLbl2.TabIndex = 2;
-            descLbl2.Text = "(Ex. Vendor, Brand, Color, SKU, ...)";
+            descLbl2.Text = "(Ex. Brand, Item Type, Style, Color, Style Number, Size)";
+            descLbl2.Click += descLbl2_Click;
             // 
             // descLbl
             // 
@@ -209,7 +210,7 @@
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(200, 23);
             dateTimePicker1.TabIndex = 3;
-            dateTimePicker1.Value = new DateTime(2023, 3, 21, 15, 59, 27, 0);
+            dateTimePicker1.Value = new DateTime(2023, 3, 31, 0, 0, 0, 0);
             // 
             // paidCheck
             // 
@@ -234,9 +235,9 @@
             priceLbl.AutoSize = true;
             priceLbl.Location = new Point(19, 31);
             priceLbl.Name = "priceLbl";
-            priceLbl.Size = new Size(53, 15);
+            priceLbl.Size = new Size(58, 15);
             priceLbl.TabIndex = 0;
-            priceLbl.Text = "Price ($):";
+            priceLbl.Text = "*Price ($):";
             // 
             // Cancel
             // 
