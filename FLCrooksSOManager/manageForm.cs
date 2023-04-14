@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
+using System.Xml.Serialization;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace FLCrooksSOManager
@@ -36,12 +37,12 @@ namespace FLCrooksSOManager
                     order.ID.ToString(),
                     order.FirstName,
                     order.LastName,
-                    order.PhoneNumber,
+                    String.Format("{0:(###) ###-####}", double.Parse(order.PhoneNumber)),
                     order.Price.ToString("C2"),
                     order.DatePlaced.ToString("MM-dd-yyyy"),
                     order.OrderPlaced ? "Yes" : "No",
                     order.Paid ? "Yes" : "No"
-    });
+                });
 
                 listView1.Items.Add(item);
             }
@@ -58,6 +59,19 @@ namespace FLCrooksSOManager
             public bool Paid { get; set; }
             public DateTime DatePlaced { get; set; }
             public bool OrderPlaced { get; set; }
+
+            // add a FilePath property
+            public string FilePath
+            {
+                get
+                {
+                    string dataDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+                    string dataSubPath = Path.Combine(dataDirectory, @"FLCrooksSOManager\");
+                    string fileName = $"{ID}{FirstName}_{LastName}.xml";
+                    string filePath = Path.Combine(dataSubPath, fileName);
+                    return filePath;
+                }
+            }
         }
 
         private List<Order> ReadOrdersFromXmlFiles(string directoryPath)
@@ -94,6 +108,8 @@ namespace FLCrooksSOManager
             return orderList;
         }
 
+
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -122,6 +138,8 @@ namespace FLCrooksSOManager
             // Sort the items in the ListView
             listView1.Sort();
         }
+
+
 
         class ListViewItemComparer : IComparer
         {
@@ -185,25 +203,15 @@ namespace FLCrooksSOManager
 
         private void editBtn_Click(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Count > 0)
-            {
-                // Get the selected item
-                ListViewItem selectedItem = listView1.SelectedItems[0];
 
-                // Extract the details from the selected item
-                string id = selectedItem.SubItems[0].Text;
-                string firstName = selectedItem.SubItems[1].Text;
-                string lastName = selectedItem.SubItems[2].Text;
-                string phoneNumber = selectedItem.SubItems[3].Text;
-                string price = selectedItem.SubItems[4].Text;
-                string datePlaced = selectedItem.SubItems[5].Text;
-                string orderPlaced = selectedItem.SubItems[6].Text;
-                string paid = selectedItem.SubItems[7].Text;
+        }
 
-                // Create a new form to show the details
-                OrderDetailsForm orderDetailsForm = new OrderDetailsForm(id, firstName, lastName, phoneNumber, price, datePlaced, orderPlaced, paid);
-                orderDetailsForm.ShowDialog();
-            }
+
+        protected override void OnActivated(EventArgs e)
+        {
+            base.OnActivated(e);
+
+            // Your code goes here
         }
     }
 }
