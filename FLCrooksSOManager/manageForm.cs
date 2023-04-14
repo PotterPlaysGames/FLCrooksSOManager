@@ -17,32 +17,49 @@ namespace FLCrooksSOManager
 {
     public partial class manageForm : Form
     {
-        public manageForm()
+        private mainForm mainFormRef;
+
+        public manageForm(mainForm mainFormRef)
         {
             InitializeComponent();
+            this.mainFormRef = mainFormRef;
         }
 
+        private void manageForm_FormClosing(object sender, EventArgs e)
+        {
+            mainFormRef.ShowMainForm();
+        }
 
         private void manageForm_Load(object sender, EventArgs e)
         {
+            UpdateListView();
+        }
+
+        private void UpdateListView()
+        {
+            listView1.Items.Clear();
+
             string dataDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string dataSubPath = Path.Combine(dataDirectory, @"FLCrooksSOManager\");
-            // Read the orders from the XML files
-            List<Order> orderList = ReadOrdersFromXmlFiles(dataSubPath);
+            string customersFilePath = Path.Combine(dataSubPath, "customers.xml");
+
+            // Read the orders from the customers file
+            List<Order> orderList = ReadOrdersFromCustomersFile(customersFilePath);
 
             // Add the orders to the ListBox
             foreach (Order order in orderList)
             {
                 ListViewItem item = new ListViewItem(new string[] {
-                    order.ID.ToString(),
-                    order.FirstName,
-                    order.LastName,
-                    String.Format("{0:(###) ###-####}", double.Parse(order.PhoneNumber)),
-                    order.Price.ToString("C2"),
-                    order.DatePlaced.ToString("MM-dd-yyyy"),
-                    order.OrderPlaced ? "Yes" : "No",
-                    order.Paid ? "Yes" : "No"
-                });
+            order.ID.ToString(),
+            order.FirstName,
+            order.LastName,
+            String.Format("{0:(###) ###-####}", double.Parse(order.PhoneNumber)),
+            order.Price.ToString("C2"),
+            order.DatePlaced.ToString("MM-dd-yyyy"),
+            order.OrderPlaced ? "Yes" : "No",
+            order.Paid ? "Yes" : "No",
+            order.Description
+            });
 
                 listView1.Items.Add(item);
             }
@@ -59,54 +76,44 @@ namespace FLCrooksSOManager
             public bool Paid { get; set; }
             public DateTime DatePlaced { get; set; }
             public bool OrderPlaced { get; set; }
-
-            // add a FilePath property
-            public string FilePath
-            {
-                get
-                {
-                    string dataDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-                    string dataSubPath = Path.Combine(dataDirectory, @"FLCrooksSOManager\");
-                    string fileName = $"{ID}{FirstName}_{LastName}.xml";
-                    string filePath = Path.Combine(dataSubPath, fileName);
-                    return filePath;
-                }
-            }
         }
 
-        private List<Order> ReadOrdersFromXmlFiles(string directoryPath)
+        private List<Order> ReadOrdersFromCustomersFile(string filePath)
         {
             List<Order> orderList = new List<Order>();
 
-            foreach (string filePath in Directory.EnumerateFiles(directoryPath, "*.xml"))
+            try
             {
-                try
-                {
-                    XmlDocument xmlDoc = new XmlDocument();
-                    xmlDoc.Load(filePath);
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load(filePath);
 
+                XmlNodeList customerList = xmlDoc.SelectNodes("//Customers/Customer");
+
+                foreach (XmlNode customerNode in customerList)
+                {
                     Order order = new Order();
-                    order.ID = int.Parse(xmlDoc.SelectSingleNode("//ID").InnerText);
-                    order.FirstName = xmlDoc.SelectSingleNode("//First_Name").InnerText;
-                    order.LastName = xmlDoc.SelectSingleNode("//Last_Name").InnerText;
-                    order.PhoneNumber = xmlDoc.SelectSingleNode("//Phone_Number").InnerText;
-                    order.Description = xmlDoc.SelectSingleNode("//Description").InnerText;
-                    order.Price = decimal.Parse(xmlDoc.SelectSingleNode("//Price").InnerText.Replace("$", ""));
-                    order.Paid = xmlDoc.SelectSingleNode("//Paid").InnerText.Equals("Yes", StringComparison.OrdinalIgnoreCase);
-                    order.DatePlaced = DateTime.Parse(xmlDoc.SelectSingleNode("//Date").InnerText);
-                    order.OrderPlaced = xmlDoc.SelectSingleNode("//Placed").InnerText.Equals("Yes", StringComparison.OrdinalIgnoreCase);
+                    order.ID = int.Parse(customerNode.SelectSingleNode("ID").InnerText);
+                    order.FirstName = customerNode.SelectSingleNode("First_Name").InnerText;
+                    order.LastName = customerNode.SelectSingleNode("Last_Name").InnerText;
+                    order.PhoneNumber = customerNode.SelectSingleNode("Phone_Number").InnerText;
+                    order.Description = customerNode.SelectSingleNode("Description").InnerText;
+                    order.Price = decimal.Parse(customerNode.SelectSingleNode("Price").InnerText.Replace("$", ""));
+                    order.Paid = customerNode.SelectSingleNode("Paid").InnerText.Equals("Yes", StringComparison.OrdinalIgnoreCase);
+                    order.DatePlaced = DateTime.Parse(customerNode.SelectSingleNode("Date").InnerText);
+                    order.OrderPlaced = customerNode.SelectSingleNode("Placed").InnerText.Equals("Yes", StringComparison.OrdinalIgnoreCase);
 
                     orderList.Add(order);
                 }
-                catch (Exception ex)
-                {
-                    // Log the error or display an error message
-                    Console.WriteLine($"Error loading file {filePath}: {ex.Message}");
-                }
+            }
+            catch (Exception ex)
+            {
+                // Log the error or display an error message
+                Console.WriteLine($"Error loading file {filePath}: {ex.Message}");
             }
 
             return orderList;
         }
+
 
 
 
@@ -139,6 +146,14 @@ namespace FLCrooksSOManager
             listView1.Sort();
         }
 
+        private void listView1_DoubleClick(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                string description = listView1.SelectedItems[0].SubItems[8].Text;
+                MessageBox.Show(description, "Product Description");
+            }
+        }
 
 
         class ListViewItemComparer : IComparer
@@ -191,26 +206,72 @@ namespace FLCrooksSOManager
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            UpdateEditButton();
+        }
+
+        private void UpdateEditButton()
+        {
+            if (listView1.InvokeRequired)
+            {
+                listView1.Invoke(new Action(() => UpdateEditButton()));
+                return;
+            }
+
             if (listView1.SelectedItems.Count > 0)
             {
+                deleteBtn.Enabled = true;
                 editBtn.Enabled = true;
             }
             else
             {
                 editBtn.Enabled = false;
+                deleteBtn.Enabled = false;
             }
         }
 
         private void editBtn_Click(object sender, EventArgs e)
         {
+            // Get the selected item in the ListView
+            ListViewItem selectedItem = listView1.SelectedItems[0];
 
+            // Extract the customer data from the ListViewItem
+            int id = int.Parse(selectedItem.SubItems[0].Text);
+            string firstName = selectedItem.SubItems[1].Text;
+            string lastName = selectedItem.SubItems[2].Text;
+            string phoneNumber = selectedItem.SubItems[3].Text;
+            decimal price = decimal.Parse(selectedItem.SubItems[4].Text.Replace("$", ""));
+            DateTime datePlaced = DateTime.ParseExact(selectedItem.SubItems[5].Text, "MM-dd-yyyy", null);
+            bool orderPlaced = selectedItem.SubItems[6].Text == "Yes";
+            bool paid = selectedItem.SubItems[7].Text == "Yes";
+            string description = selectedItem.SubItems[8].Text;
+
+            // Create a new editOrderForm and pass the customer data to it
+            EditOrderForm editForm = new EditOrderForm(id, firstName, lastName, phoneNumber, price, datePlaced, orderPlaced, paid, description);
+            editForm.ShowDialog();
+
+            editBtn.Enabled = false;
+            deleteBtn.Enabled = false;
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                // Show a message box to confirm deletion
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this item?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    MessageBox.Show("This function does not work yet. Coding it soon");
+                }
+            }
         }
 
 
         protected override void OnActivated(EventArgs e)
         {
             base.OnActivated(e);
-
+            UpdateListView();
             // Your code goes here
         }
     }

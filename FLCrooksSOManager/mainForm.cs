@@ -9,17 +9,25 @@ namespace FLCrooksSOManager
 
         private void settingsIcon_Click(object sender, EventArgs e)
         {
+
             new settingsForm().ShowDialog();
         }
 
         private void newOrderBtn_Click(object sender, EventArgs e)
         {
-            new newOrderForm().Show();
+            this.Hide();
+            new newOrderForm(this).Show();
         }
 
         private void manageBtn_Click(object sender, EventArgs e)
         {
-            new manageForm().Show();
+            this.Hide();
+            new manageForm(this).Show();
+        }
+
+        public void ShowMainForm()
+        {
+            this.Show();
         }
     }
 }
