@@ -40,11 +40,13 @@
             DatePlaced = new ColumnHeader();
             Paid = new ColumnHeader();
             Placed = new ColumnHeader();
+            Description = new ColumnHeader();
+            deleteBtn = new Button();
             SuspendLayout();
             // 
             // newOrderBtnMgr
             // 
-            newOrderBtnMgr.Location = new Point(633, 39);
+            newOrderBtnMgr.Location = new Point(779, 39);
             newOrderBtnMgr.Name = "newOrderBtnMgr";
             newOrderBtnMgr.Size = new Size(112, 35);
             newOrderBtnMgr.TabIndex = 2;
@@ -55,7 +57,7 @@
             // editBtn
             // 
             editBtn.Enabled = false;
-            editBtn.Location = new Point(633, 383);
+            editBtn.Location = new Point(782, 383);
             editBtn.Name = "editBtn";
             editBtn.Size = new Size(112, 35);
             editBtn.TabIndex = 3;
@@ -65,16 +67,17 @@
             // 
             // listView1
             // 
-            listView1.Columns.AddRange(new ColumnHeader[] { ID, FirstName, LastName, PhoneNumber, Price, DatePlaced, Paid, Placed });
+            listView1.Columns.AddRange(new ColumnHeader[] { ID, FirstName, LastName, PhoneNumber, Price, DatePlaced, Paid, Placed, Description });
             listView1.FullRowSelect = true;
             listView1.Location = new Point(12, 80);
             listView1.Name = "listView1";
-            listView1.Size = new Size(733, 297);
+            listView1.Size = new Size(882, 297);
             listView1.TabIndex = 4;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
             listView1.ColumnClick += listView1_ColumnClick;
             listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
+            listView1.DoubleClick += listView1_DoubleClick;
             // 
             // ID
             // 
@@ -121,18 +124,37 @@
             Placed.TextAlign = HorizontalAlignment.Center;
             Placed.Width = 100;
             // 
+            // Description
+            // 
+            Description.Text = "Description";
+            Description.TextAlign = HorizontalAlignment.Center;
+            Description.Width = 150;
+            // 
+            // deleteBtn
+            // 
+            deleteBtn.Enabled = false;
+            deleteBtn.Location = new Point(12, 383);
+            deleteBtn.Name = "deleteBtn";
+            deleteBtn.Size = new Size(112, 35);
+            deleteBtn.TabIndex = 5;
+            deleteBtn.Text = "DELETE";
+            deleteBtn.UseVisualStyleBackColor = true;
+            deleteBtn.Click += deleteBtn_Click;
+            // 
             // manageForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
-            ClientSize = new Size(754, 442);
+            ClientSize = new Size(903, 442);
+            Controls.Add(deleteBtn);
             Controls.Add(listView1);
             Controls.Add(editBtn);
             Controls.Add(newOrderBtnMgr);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "manageForm";
             Text = "Manage";
+            FormClosing += manageForm_FormClosing;
             Load += manageForm_Load;
             ResumeLayout(false);
         }
@@ -149,5 +171,7 @@
         private ColumnHeader DatePlaced;
         private ColumnHeader Placed;
         private ColumnHeader Paid;
+        private ColumnHeader Description;
+        private Button deleteBtn;
     }
 }
