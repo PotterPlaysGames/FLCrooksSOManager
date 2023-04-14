@@ -43,9 +43,9 @@
             descLbl = new Label();
             descBox = new RichTextBox();
             orderInfo = new GroupBox();
+            dateTimePicker1 = new DateTimePicker();
             orderPlacedCheck = new CheckBox();
             label1 = new Label();
-            dateTimePicker1 = new DateTimePicker();
             paidCheck = new CheckBox();
             priceTxtBox = new TextBox();
             priceLbl = new Label();
@@ -53,6 +53,7 @@
             createOrder = new Button();
             label2 = new Label();
             label3 = new Label();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             custInfo.SuspendLayout();
             servicesAndDesc.SuspendLayout();
             orderInfo.SuspendLayout();
@@ -77,11 +78,11 @@
             // example
             // 
             example.AutoSize = true;
-            example.Location = new Point(104, 111);
+            example.Location = new Point(147, 108);
             example.Name = "example";
-            example.Size = new Size(152, 15);
+            example.Size = new Size(93, 15);
             example.TabIndex = 6;
-            example.Text = "(ex. 8885558888 or 8885555)";
+            example.Text = "(ex. 8885558888)";
             // 
             // pNumberTxtBox
             // 
@@ -172,9 +173,9 @@
             // 
             // orderInfo
             // 
+            orderInfo.Controls.Add(dateTimePicker1);
             orderInfo.Controls.Add(orderPlacedCheck);
             orderInfo.Controls.Add(label1);
-            orderInfo.Controls.Add(dateTimePicker1);
             orderInfo.Controls.Add(paidCheck);
             orderInfo.Controls.Add(priceTxtBox);
             orderInfo.Controls.Add(priceLbl);
@@ -185,10 +186,18 @@
             orderInfo.TabStop = false;
             orderInfo.Text = "Order Info";
             // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(209, 125);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(83, 23);
+            dateTimePicker1.TabIndex = 6;
+            // 
             // orderPlacedCheck
             // 
             orderPlacedCheck.AutoSize = true;
-            orderPlacedCheck.Location = new Point(222, 121);
+            orderPlacedCheck.Location = new Point(56, 81);
             orderPlacedCheck.Name = "orderPlacedCheck";
             orderPlacedCheck.Size = new Size(99, 19);
             orderPlacedCheck.TabIndex = 5;
@@ -198,24 +207,16 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(7, 85);
+            label1.Location = new Point(82, 131);
             label1.Name = "label1";
             label1.Size = new Size(108, 15);
             label1.TabIndex = 4;
             label1.Text = "Date order entered:";
             // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(121, 82);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 3;
-            dateTimePicker1.Value = new DateTime(2023, 3, 31, 0, 0, 0, 0);
-            // 
             // paidCheck
             // 
             paidCheck.AutoSize = true;
-            paidCheck.Location = new Point(222, 30);
+            paidCheck.Location = new Point(227, 81);
             paidCheck.Name = "paidCheck";
             paidCheck.Size = new Size(54, 19);
             paidCheck.TabIndex = 2;
@@ -224,7 +225,7 @@
             // 
             // priceTxtBox
             // 
-            priceTxtBox.Location = new Point(78, 28);
+            priceTxtBox.Location = new Point(192, 28);
             priceTxtBox.Name = "priceTxtBox";
             priceTxtBox.Size = new Size(100, 23);
             priceTxtBox.TabIndex = 1;
@@ -233,7 +234,7 @@
             // priceLbl
             // 
             priceLbl.AutoSize = true;
-            priceLbl.Location = new Point(19, 31);
+            priceLbl.Location = new Point(97, 31);
             priceLbl.Name = "priceLbl";
             priceLbl.Size = new Size(58, 15);
             priceLbl.TabIndex = 0;
@@ -325,12 +326,13 @@
         private TextBox priceTxtBox;
         private Label priceLbl;
         private Label label1;
-        private DateTimePicker dateTimePicker1;
         private CheckBox paidCheck;
         private CheckBox orderPlacedCheck;
         private Button Cancel;
         private Button createOrder;
         private Label label2;
         private Label label3;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private DateTimePicker dateTimePicker1;
     }
 }
