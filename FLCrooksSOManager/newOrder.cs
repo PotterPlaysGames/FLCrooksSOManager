@@ -26,6 +26,27 @@ namespace FLCrooksSOManager
             InitializeComponent2();
         }
 
+        private bool isFormatting = false;
+
+        private void pNumberTxtBox_TextChanged(object sender, EventArgs e)
+        {
+            // Save cursor position before changing the text
+            int cursorPosition = pNumberTxtBox.SelectionStart;
+
+            string phoneNumber = pNumberTxtBox.Text.Trim().Replace("-", "").Replace("(", "").Replace(")", "").Replace(" ", "");
+            if (phoneNumber.Length == 7)
+            {
+                pNumberTxtBox.Text = phoneNumber.Substring(0, 3) + "-" + phoneNumber.Substring(3);
+            }
+            else if (phoneNumber.Length == 10)
+            {
+                pNumberTxtBox.Text = "(" + phoneNumber.Substring(0, 3) + ") " + phoneNumber.Substring(3, 3) + "-" + phoneNumber.Substring(6);
+            }
+
+            // Restore cursor position after changing the text
+            pNumberTxtBox.SelectionStart = pNumberTxtBox.Text.Length;
+        }
+
 
         public void newOrderForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -53,7 +74,7 @@ namespace FLCrooksSOManager
 
         string paidIsChecked = "No";
         string OrderPlaced = "No";
-        public void CreateFile()
+        public bool CreateFile()
         {
             if (paidCheck.Checked)
             {
@@ -67,8 +88,6 @@ namespace FLCrooksSOManager
             if (!Directory.Exists(dataDirectory))
                 Directory.CreateDirectory(dataDirectory);
             string dataSubPath = Path.Combine(dataDirectory, @"FLCrooksSOManager\");
-            var countFiles = Directory.GetFiles(dataSubPath, "*.*", SearchOption.AllDirectories).Count();
-            long uniqueFileNum = countFiles + 1;
             string createFile = "Customers.xml";
             if (!Directory.Exists(dataSubPath))
                 Directory.CreateDirectory(dataSubPath);
@@ -91,6 +110,34 @@ namespace FLCrooksSOManager
             // Generate a new customer ID
             int newCustomerId = lastCustomerId + 1;
 
+            string phoneNumber = pNumberTxtBox.Text.Trim().Replace("-", "").Replace("(", "").Replace(")", "").Replace(" ", "");
+
+            if (string.IsNullOrEmpty(phoneNumber))
+            {
+                MessageBox.Show("Phone number cannot be empty");
+                return false;
+            }
+
+            if (!phoneNumber.All(char.IsDigit))
+            {
+                MessageBox.Show("Phone number must contain only digits");
+                return false;
+            }
+
+            if (phoneNumber.Length != 7 && phoneNumber.Length != 10)
+            {
+                MessageBox.Show("Phone number must have 7 or 10 digits");
+                return false;
+            }
+
+            decimal price;
+            if (!decimal.TryParse(priceTxtBox.Text, out price))
+            {
+                MessageBox.Show("Price must be a valid decimal number");
+                return false;
+            }
+
+
             // Create the XDocument with the new customer
             XElement customerElement = new XElement("Customer",
                                 new XElement("ID", newCustomerId),
@@ -98,7 +145,7 @@ namespace FLCrooksSOManager
                                 new XElement("Last_Name", lNameTxtBox.Text),
                                 new XElement("Phone_Number", pNumberTxtBox.Text),
                                 new XElement("Description", descBox.Text),
-                                new XElement("Price", "$" + priceTxtBox.Text),
+                                new XElement("Price", "$" + price),
                                 new XElement("Paid", paidIsChecked),
                                 new XElement("Date", dateTimePicker1.Value.Date.ToString("d")),
                                 new XElement("Placed", OrderPlaced));
@@ -111,29 +158,37 @@ namespace FLCrooksSOManager
             dataDoc.Save(dataPath);
 
             MessageBox.Show("Customer Created!", "Customer Complete!", MessageBoxButtons.OK);
+            var manageFormInstance = Application.OpenForms["manageForm"] as manageForm;
+            if (manageFormInstance != null)
+            {
+                manageFormInstance.UpdateListView();
+            }
+            return true;
         }
 
         private void createOrder_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(fNameTxtBox.Text) && !String.IsNullOrEmpty(lNameTxtBox.Text) && !String.IsNullOrEmpty(pNumberTxtBox.Text) && !String.IsNullOrEmpty(descBox.Text) && !String.IsNullOrEmpty(priceTxtBox.Text))
             {
-                CreateFile();
-                DialogResult anotherOrderAnswer = MessageBox.Show("Would you like to create another order?", "Next Order", MessageBoxButtons.YesNo);
+                if (CreateFile())
+                {
+                    DialogResult anotherOrderAnswer = MessageBox.Show("Would you like to create another order?", "Next Order", MessageBoxButtons.YesNo);
 
-                if (anotherOrderAnswer == DialogResult.Yes)
-                {
-                    fNameTxtBox.Clear();
-                    lNameTxtBox.Clear();
-                    pNumberTxtBox.Clear();
-                    descBox.Clear();
-                    priceTxtBox.Clear();
-                    paidCheck.Checked = false;
-                    dateTimePicker1.Value = DateTime.Now;
-                    orderPlacedCheck.Checked = false;
-                }
-                else
-                {
-                    this.Close();
+                    if (anotherOrderAnswer == DialogResult.Yes)
+                    {
+                        fNameTxtBox.Clear();
+                        lNameTxtBox.Clear();
+                        pNumberTxtBox.Clear();
+                        descBox.Clear();
+                        priceTxtBox.Clear();
+                        paidCheck.Checked = false;
+                        dateTimePicker1.Value = DateTime.Now;
+                        orderPlacedCheck.Checked = false;
+                    }
+                    else
+                    {
+                        this.Close();
+                    }
                 }
             }
             else

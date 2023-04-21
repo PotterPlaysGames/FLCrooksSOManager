@@ -145,6 +145,7 @@
             resources.ApplyResources(cancelBtn, "cancelBtn");
             cancelBtn.Name = "cancelBtn";
             cancelBtn.UseVisualStyleBackColor = true;
+            cancelBtn.Click += cancelBtn_Click;
             // 
             // EditOrderForm
             // 
@@ -172,6 +173,7 @@
             Name = "EditOrderForm";
             ResumeLayout(false);
             PerformLayout();
+            FormClosing += EditOrderForm_FormClosing;
         }
 
         #endregion
