@@ -90,6 +90,7 @@
             pNumberTxtBox.Name = "pNumberTxtBox";
             pNumberTxtBox.Size = new Size(100, 23);
             pNumberTxtBox.TabIndex = 5;
+            pNumberTxtBox.TextChanged += pNumberTxtBox_TextChanged;
             // 
             // pNumberLbl
             // 
@@ -372,6 +373,7 @@
             pNumberTxtBox.Name = "pNumberTxtBox";
             pNumberTxtBox.Size = new Size(100, 23);
             pNumberTxtBox.TabIndex = 5;
+            pNumberTxtBox.TextChanged += pNumberTxtBox_TextChanged;
             // 
             // pNumberLbl
             // 

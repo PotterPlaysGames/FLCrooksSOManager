@@ -25,6 +25,11 @@ namespace FLCrooksSOManager
             this.mainFormRef = mainFormRef;
         }
 
+        public manageForm()
+        {
+            InitializeComponent();
+        }
+
         private void manageForm_FormClosing(object sender, EventArgs e)
         {
             mainFormRef.ShowMainForm();
@@ -35,7 +40,7 @@ namespace FLCrooksSOManager
             UpdateListView();
         }
 
-        private void UpdateListView()
+        public void UpdateListView()
         {
             listView1.Items.Clear();
 
@@ -53,7 +58,8 @@ namespace FLCrooksSOManager
             order.ID.ToString(),
             order.FirstName,
             order.LastName,
-            String.Format("{0:(###) ###-####}", double.Parse(order.PhoneNumber)),
+            order.PhoneNumber,
+            //String.Format("{0:(###) ###-####}", double.Parse(order.PhoneNumber)),
             order.Price.ToString("C2"),
             order.DatePlaced.ToString("MM-dd-yyyy"),
             order.OrderPlaced ? "Yes" : "No",
@@ -202,6 +208,8 @@ namespace FLCrooksSOManager
         private void newOrderBtnMgr_Click(object sender, EventArgs e)
         {
             new newOrderForm().Show();
+            editBtn.Enabled = false;
+            deleteBtn.Enabled = false;
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -257,22 +265,41 @@ namespace FLCrooksSOManager
         {
             if (listView1.SelectedItems.Count > 0)
             {
-                // Show a message box to confirm deletion
-                DialogResult result = MessageBox.Show("Are you sure you want to delete this item?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                // Get the ID of the selected order
+                int selectedID = int.Parse(listView1.SelectedItems[0].SubItems[0].Text);
 
-                if (result == DialogResult.Yes)
+                // Get the path to the customers.xml file
+                string dataDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+                string dataSubPath = Path.Combine(dataDirectory, @"FLCrooksSOManager\");
+                string customersFilePath = Path.Combine(dataSubPath, "customers.xml");
+
+                // Load the customers.xml file into an XDocument
+                XDocument customersDoc = XDocument.Load(customersFilePath);
+
+                // Find the customer element with the matching ID
+                XElement customerToDelete = customersDoc.Descendants("Customer")
+                    .Where(customer => customer.Element("ID").Value == selectedID.ToString())
+                    .FirstOrDefault();
+
+                if (customerToDelete != null)
                 {
-                    MessageBox.Show("This function does not work yet. Coding it soon");
+                    // Ask the user to confirm the deletion
+                    DialogResult result = MessageBox.Show("Are you sure you want to delete this customer? This can't be undone.", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        // Remove the customer element from the XDocument
+                        customerToDelete.Remove();
+
+                        // Save the changes to the customers.xml file
+                        customersDoc.Save(customersFilePath);
+
+                        UpdateListView();
+                    }
+
+                    editBtn.Enabled = false;
+                    deleteBtn.Enabled = false;
                 }
             }
-        }
-
-
-        protected override void OnActivated(EventArgs e)
-        {
-            base.OnActivated(e);
-            UpdateListView();
-            // Your code goes here
         }
     }
 }

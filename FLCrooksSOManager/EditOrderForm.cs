@@ -65,7 +65,8 @@ namespace FLCrooksSOManager
             idTextBox.Text = id.ToString();
             idTextBox.Size = new Size(115, 23);
             idTextBox.Location = new Point(165, 27);
-            idTextBox.Margin = new Padding(3,3,3,3);
+            idTextBox.Margin = new Padding(3, 3, 3, 3);
+            idTextBox.Enabled = false;
 
             firstNameTextBox.Text = firstName;
             firstNameTextBox.Size = new Size(115, 23);
@@ -115,23 +116,81 @@ namespace FLCrooksSOManager
 
             saveButton.Text = "Save";
             saveButton.Location = new Point(165, 420);
-            saveButton.Margin = new Padding(3,3,3,3);
+            saveButton.Margin = new Padding(3, 3, 3, 3);
             saveButton.Size = new Size(115, 52);
         }
-
+        public bool buttonClicked = false;
         public void EditOrderForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            if (e.CloseReason == CloseReason.UserClosing && buttonClicked == false)
+            {
+                // Prompt the user to confirm that they want to exit
+                DialogResult result = MessageBox.Show("Are you sure you want to exit?",
+                                                      "Confirm Exit",
+                                                      MessageBoxButtons.YesNo,
+                                                      MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    // Close the main form
+                    e.Cancel = false;
+                }
+                else
+                {
+                    // Cancel the close event
+                    e.Cancel = true;
+                }
+            }
         }
 
         private void saveButton_Click_1(object sender, EventArgs e)
         {
+            string dataDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            if (!Directory.Exists(dataDirectory))
+                Directory.CreateDirectory(dataDirectory);
+            string dataSubPath = Path.Combine(dataDirectory, @"FLCrooksSOManager\");
+            string createFile = "Customers.xml";
+            if (!Directory.Exists(dataSubPath))
+                Directory.CreateDirectory(dataSubPath);
+            string dataPath = Path.Combine(dataSubPath, createFile);
+            XDocument xDoc = XDocument.Load(dataPath);
 
+            // Find the customer with the matching ID and update its data
+            int id = int.Parse(idTextBox.Text);
+            XElement customer = xDoc.Descendants("Customer")
+                                    .Where(c => (int)c.Element("ID") == id)
+                                    .FirstOrDefault();
+            if (customer != null)
+            {
+                customer.Element("First_Name").Value = firstNameTextBox.Text;
+                customer.Element("Last_Name").Value = lastNameTextBox.Text;
+                customer.Element("Phone_Number").Value = phoneNumberTextBox.Text;
+                customer.Element("Description").Value = descriptionTextBox.Text;
+                customer.Element("Price").Value = priceTextBox.Text;
+                customer.Element("Paid").Value = paidCheckBox.Checked ? "Yes" : "No";
+                customer.Element("Date").Value = datePlacedDateTimePicker.Value.ToShortDateString();
+                customer.Element("Placed").Value = orderPlacedCheckBox.Checked ? "Yes" : "No";
+            }
+
+            xDoc.Save(dataPath);
+
+            buttonClicked = true;
+            var manageFormInstance = Application.OpenForms["manageForm"] as manageForm;
+            if (manageFormInstance != null)
+            {
+                manageFormInstance.UpdateListView();
+            }
+
+            this.Close();
         }
 
         private void idEditLbl_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

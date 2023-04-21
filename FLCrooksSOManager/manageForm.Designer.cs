@@ -106,6 +106,7 @@
             // 
             Price.Text = "Price";
             Price.TextAlign = HorizontalAlignment.Center;
+            Price.Width = 70;
             // 
             // DatePlaced
             // 
