@@ -6,11 +6,13 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
+using static FLCrooksSOManager.manageForm;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace FLCrooksSOManager
@@ -40,7 +42,7 @@ namespace FLCrooksSOManager
             UpdateListView();
         }
 
-        public void UpdateListView()
+        public void UpdateListView(string searchTerm = "")
         {
             listView1.Items.Clear();
 
@@ -50,6 +52,31 @@ namespace FLCrooksSOManager
 
             // Read the orders from the customers file
             List<Order> orderList = ReadOrdersFromCustomersFile(customersFilePath);
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                int id;
+                long phoneNumber;
+                bool isNumericId = false;
+                if (searchTerm.StartsWith("ID:"))
+                {
+                    isNumericId = int.TryParse(searchTerm.Substring(3), out id);
+                }
+                else
+                {
+                    isNumericId = int.TryParse(searchTerm, out id);
+                }
+
+                orderList = orderList.Where(order =>
+                    (isNumericId && order.ID == id) ||                            // Search by ID
+                    (long.TryParse(searchTerm, out phoneNumber) && order.PhoneNumber.Contains(searchTerm)) ||  // Search by phone number
+                    order.FirstName.Contains(searchTerm) ||
+                    order.LastName.Contains(searchTerm) ||
+                    order.Description.Contains(searchTerm)
+                ).ToList();
+            }
+
+
 
             // Add the orders to the ListBox
             foreach (Order order in orderList)
@@ -300,6 +327,11 @@ namespace FLCrooksSOManager
                     deleteBtn.Enabled = false;
                 }
             }
+        }
+
+        private void searchBox_TextChanged(object sender, EventArgs e)
+        {
+            UpdateListView(searchBox.Text);
         }
     }
 }

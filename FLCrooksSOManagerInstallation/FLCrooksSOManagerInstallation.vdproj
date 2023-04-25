@@ -51,6 +51,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -191,21 +199,21 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:FLCrooks Speical Order Manager"
-        "ProductCode" = "8:{F29166D0-1FED-4794-BE85-FB7C2A561CC1}"
-        "PackageCode" = "8:{E30F2BC7-A5AE-41BD-A100-EC7241B0FAEB}"
+        "ProductCode" = "8:{214DB2DB-3A07-4D2B-B734-7110D02F046E}"
+        "PackageCode" = "8:{179EB768-9BE6-4CD6-907C-D88871136463}"
         "UpgradeCode" = "8:{D532FA4F-009C-4566-86C9-D8114191EFAB}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:0.0.0006"
+        "ProductVersion" = "8:0.0.0010"
         "Manufacturer" = "8:FLCrooks"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:FLCrooks Management Installer"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:FLCrooks"
+        "ARPCONTACT" = "8:Aidan Potter"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
