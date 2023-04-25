@@ -40,6 +40,7 @@
             // 
             // mainPageLabel
             // 
+            mainPageLabel.Anchor = AnchorStyles.Top;
             mainPageLabel.AutoSize = true;
             mainPageLabel.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point);
             mainPageLabel.Location = new Point(216, 169);
@@ -50,6 +51,7 @@
             // 
             // flcrooksLogo
             // 
+            flcrooksLogo.Anchor = AnchorStyles.Top;
             flcrooksLogo.BackColor = SystemColors.Control;
             flcrooksLogo.Image = Properties.Resources.R;
             flcrooksLogo.Location = new Point(216, 12);
@@ -75,9 +77,11 @@
             // 
             // newOrderBtn
             // 
+            newOrderBtn.Anchor = AnchorStyles.Right;
+            newOrderBtn.AutoSize = true;
             newOrderBtn.Cursor = Cursors.Hand;
             newOrderBtn.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            newOrderBtn.Location = new Point(83, 250);
+            newOrderBtn.Location = new Point(77, 250);
             newOrderBtn.Name = "newOrderBtn";
             newOrderBtn.Size = new Size(179, 94);
             newOrderBtn.TabIndex = 3;
@@ -87,6 +91,8 @@
             // 
             // manageBtn
             // 
+            manageBtn.Anchor = AnchorStyles.Left;
+            manageBtn.AutoSize = true;
             manageBtn.Cursor = Cursors.Hand;
             manageBtn.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             manageBtn.Location = new Point(547, 250);
@@ -101,6 +107,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(800, 450);
             Controls.Add(manageBtn);
@@ -111,6 +118,8 @@
             Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
+            MaximumSize = new Size(1000, 500);
+            MinimumSize = new Size(816, 489);
             Name = "mainForm";
             Text = "F.L. Crooks S.O.M.S";
             ((System.ComponentModel.ISupportInitialize)flcrooksLogo).EndInit();

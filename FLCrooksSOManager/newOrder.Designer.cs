@@ -296,10 +296,12 @@
             Controls.Add(servicesAndDesc);
             Controls.Add(custInfo);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximumSize = new Size(816, 489);
+            MinimumSize = new Size(816, 489);
             Name = "newOrderForm";
             Text = "New Order";
-            Load += newOrderForm_Load;
             FormClosing += newOrderForm_FormClosing;
+            Load += newOrderForm_Load;
             custInfo.ResumeLayout(false);
             custInfo.PerformLayout();
             servicesAndDesc.ResumeLayout(false);
@@ -578,6 +580,8 @@
             Controls.Add(orderInfo);
             Controls.Add(servicesAndDesc);
             Controls.Add(custInfo);
+            MaximumSize = new Size(816, 489);
+            MinimumSize = new Size(816, 489);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "newOrderForm";
             Text = "New Order";

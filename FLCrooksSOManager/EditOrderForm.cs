@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FLCrooksSOManager.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +24,9 @@ namespace FLCrooksSOManager
             InitializeComponent();
 
             this.Size = new Size(337, 523);
+            this.MinimumSize = new Size(337, 523);
+            this.MaximumSize = new Size(337, 523);
+            this.Icon = Properties.Resources.flico1;
 
             descriptionTextBox.Size = new Size(248, 105);
 
@@ -67,6 +71,7 @@ namespace FLCrooksSOManager
             idTextBox.Location = new Point(165, 27);
             idTextBox.Margin = new Padding(3, 3, 3, 3);
             idTextBox.Enabled = false;
+            idTextBox.Anchor = (AnchorStyles)Right;
 
             firstNameTextBox.Text = firstName;
             firstNameTextBox.Size = new Size(115, 23);

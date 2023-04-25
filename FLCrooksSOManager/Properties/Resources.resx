@@ -124,4 +124,7 @@
   <data name="cogwheel+configuration+options+parameters+properties+settings-1320165735121041526" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cogwheel+configuration+options+parameters+properties+settings-1320165735121041526.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="flico1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flico.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

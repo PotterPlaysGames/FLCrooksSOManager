@@ -171,9 +171,9 @@
             Controls.Add(fNameLbl);
             Controls.Add(idEditLbl);
             Name = "EditOrderForm";
+            FormClosing += EditOrderForm_FormClosing;
             ResumeLayout(false);
             PerformLayout();
-            FormClosing += EditOrderForm_FormClosing;
         }
 
         #endregion

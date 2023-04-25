@@ -46,6 +46,8 @@
             // 
             // newOrderBtnMgr
             // 
+            newOrderBtnMgr.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            newOrderBtnMgr.AutoSize = true;
             newOrderBtnMgr.Location = new Point(779, 39);
             newOrderBtnMgr.Name = "newOrderBtnMgr";
             newOrderBtnMgr.Size = new Size(112, 35);
@@ -56,6 +58,8 @@
             // 
             // editBtn
             // 
+            editBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            editBtn.AutoSize = true;
             editBtn.Enabled = false;
             editBtn.Location = new Point(782, 383);
             editBtn.Name = "editBtn";
@@ -67,6 +71,7 @@
             // 
             // listView1
             // 
+            listView1.Anchor = AnchorStyles.Top;
             listView1.Columns.AddRange(new ColumnHeader[] { ID, FirstName, LastName, PhoneNumber, Price, DatePlaced, Paid, Placed, Description });
             listView1.FullRowSelect = true;
             listView1.Location = new Point(12, 80);
@@ -129,10 +134,12 @@
             // 
             Description.Text = "Description";
             Description.TextAlign = HorizontalAlignment.Center;
-            Description.Width = 150;
+            Description.Width = 145;
             // 
             // deleteBtn
             // 
+            deleteBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            deleteBtn.AutoSize = true;
             deleteBtn.Enabled = false;
             deleteBtn.Location = new Point(12, 383);
             deleteBtn.Name = "deleteBtn";
@@ -153,11 +160,13 @@
             Controls.Add(editBtn);
             Controls.Add(newOrderBtnMgr);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MinimumSize = new Size(919, 481);
             Name = "manageForm";
             Text = "Manage";
             FormClosing += manageForm_FormClosing;
             Load += manageForm_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
