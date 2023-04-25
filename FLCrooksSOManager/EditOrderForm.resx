@@ -57,490 +57,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;descLbl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="descLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>115, 155</value>
-  </data>
-  <data name="&gt;&gt;priceTextBox.Name" xml:space="preserve">
-    <value>priceTextBox</value>
-  </data>
-  <data name="&gt;&gt;paidEditLbl.Name" xml:space="preserve">
-    <value>paidEditLbl</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>EditOrderForm</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;firstNameTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="fNameEditLbl.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;idEditLbl.Name" xml:space="preserve">
-    <value>idEditLbl</value>
-  </data>
-  <data name="&gt;&gt;descriptionTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
-  </data>
-  <data name="&gt;&gt;pNumberEditLbl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="fNameLbl.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lNameLbl.Name" xml:space="preserve">
-    <value>lNameLbl</value>
-  </data>
-  <data name="fNameEditLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>43, 41</value>
-  </data>
-  <data name="&gt;&gt;orderPlacedEditLbl.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;phoneNumberTextBox.Name" xml:space="preserve">
-    <value>phoneNumberTextBox</value>
-  </data>
-  <data name="&gt;&gt;paidCheckBox.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;idTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Form1</value>
-  </data>
-  <data name="firstNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>148, 44</value>
-  </data>
-  <data name="&gt;&gt;pNumLbl.Name" xml:space="preserve">
-    <value>pNumLbl</value>
-  </data>
-  <data name="&gt;&gt;pNumLbl.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;descEditLbl.ZOrder" xml:space="preserve">
     <value>14</value>
-  </data>
-  <data name="&gt;&gt;idLbl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lastNameTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="firstNameTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;phoneNumberTextBox.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;lastNameTextBox.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="fNameLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 59</value>
-  </data>
-  <data name="descriptionTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;paidCheckBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="idLbl.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="paidEditLbl.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;priceEditLbl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;fNameEditLbl.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;datePlacedDateTimePicker.Name" xml:space="preserve">
-    <value>datePlacedDateTimePicker</value>
-  </data>
-  <data name="&gt;&gt;idLbl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="descLbl.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;fNameEditLbl.Name" xml:space="preserve">
-    <value>fNameEditLbl</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 114</value>
-  </data>
-  <data name="&gt;&gt;orderPlacedEditLbl.Name" xml:space="preserve">
-    <value>orderPlacedEditLbl</value>
-  </data>
-  <data name="&gt;&gt;saveButton.Name" xml:space="preserve">
-    <value>saveButton</value>
-  </data>
-  <data name="paidCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 326</value>
-  </data>
-  <data name="lastNameTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="datePlacedDateTimePicker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>169, 347</value>
-  </data>
-  <data name="&gt;&gt;lNameLbl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
-  </data>
-  <data name="saveButton.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="pNumLbl.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;paidEditLbl.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;orderPlacedCheckBox.Name" xml:space="preserve">
-    <value>orderPlacedCheckBox</value>
-  </data>
-  <data name="&gt;&gt;lNameEditLbl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;fNameEditLbl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lastNameTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lNameLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 88</value>
-  </data>
-  <data name="&gt;&gt;descriptionTextBox.Name" xml:space="preserve">
-    <value>descriptionTextBox</value>
-  </data>
-  <data name="&gt;&gt;priceEditLbl.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="priceTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>148, 264</value>
-  </data>
-  <data name="&gt;&gt;paidEditLbl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;saveButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="paidEditLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>43, 325</value>
-  </data>
-  <data name="pNumberEditLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 89</value>
-  </data>
-  <data name="orderPlacedEditLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 297</value>
-  </data>
-  <data name="&gt;&gt;descLbl.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;paidCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;orderPlacedEditLbl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;orderPlacedCheckBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lNameLbl.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="lNameEditLbl.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;fNameEditLbl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="descEditLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>43, 134</value>
-  </data>
-  <data name="&gt;&gt;firstNameTextBox.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;cancelBtn.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lNameEditLbl.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;priceEditLbl.Name" xml:space="preserve">
-    <value>priceEditLbl</value>
-  </data>
-  <data name="priceEditLbl.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;firstNameTextBox.Name" xml:space="preserve">
-    <value>firstNameTextBox</value>
-  </data>
-  <data name="&gt;&gt;fNameLbl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="orderPlacedCheckBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 298</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="paidCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;idEditLbl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lNameEditLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 65</value>
-  </data>
-  <data name="idTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
   </data>
   <data name="&gt;&gt;paidCheckBox.Name" xml:space="preserve">
     <value>paidCheckBox</value>
   </data>
-  <data name="&gt;&gt;cancelBtn.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;priceTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;idLbl.Name" xml:space="preserve">
-    <value>idLbl</value>
-  </data>
-  <data name="&gt;&gt;lNameLbl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;idTextBox.ZOrder" xml:space="preserve">
+    <value>12</value>
   </data>
   <data name="&gt;&gt;fNameLbl.Name" xml:space="preserve">
     <value>fNameLbl</value>
   </data>
-  <data name="&gt;&gt;dateEditLbl.Name" xml:space="preserve">
-    <value>dateEditLbl</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="orderPlacedCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 298</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lNameEditLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 65</value>
   </data>
-  <data name="&gt;&gt;lastNameTextBox.Name" xml:space="preserve">
-    <value>lastNameTextBox</value>
-  </data>
-  <data name="&gt;&gt;idEditLbl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pNumLbl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="phoneNumberTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;datePlacedDateTimePicker.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;idTextBox.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;pNumberEditLbl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;paidEditLbl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;orderPlacedCheckBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="pNumberEditLbl.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;idLbl.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;descEditLbl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="pNumLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 117</value>
-  </data>
-  <data name="&gt;&gt;descriptionTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="descEditLbl.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;descriptionTextBox.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="&gt;&gt;pNumLbl.Name" xml:space="preserve">
+    <value>pNumLbl</value>
   </data>
-  <data name="&gt;&gt;phoneNumberTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;phoneNumberTextBox.Name" xml:space="preserve">
+    <value>phoneNumberTextBox</value>
   </data>
-  <data name="&gt;&gt;pNumLbl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="dateEditLbl.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;fNameLbl.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="cancelBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 420</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;priceTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lNameEditLbl.Name" xml:space="preserve">
-    <value>lNameEditLbl</value>
-  </data>
-  <data name="&gt;&gt;priceTextBox.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="idLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 18</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;saveButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="dateEditLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 353</value>
-  </data>
-  <data name="descriptionTextBox.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;datePlacedDateTimePicker.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;descLbl.Name" xml:space="preserve">
-    <value>descLbl</value>
-  </data>
-  <data name="&gt;&gt;firstNameTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lNameEditLbl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;orderPlacedCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;fNameLbl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;descEditLbl.Name" xml:space="preserve">
-    <value>descEditLbl</value>
-  </data>
-  <data name="&gt;&gt;saveButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;cancelBtn.Name" xml:space="preserve">
-    <value>cancelBtn</value>
-  </data>
-  <data name="&gt;&gt;dateEditLbl.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;phoneNumberTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;orderPlacedEditLbl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="orderPlacedCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="idEditLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>34, 29</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 89</value>
-  </data>
-  <data name="idTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>148, 15</value>
-  </data>
-  <data name="cancelBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="lastNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>148, 73</value>
-  </data>
-  <data name="priceEditLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 267</value>
-  </data>
-  <data name="&gt;&gt;cancelBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
   </data>
   <data name="&gt;&gt;pNumberEditLbl.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="&gt;&gt;priceEditLbl.Parent" xml:space="preserve">
+  <data name="cancelBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 420</value>
+  </data>
+  <data name="&gt;&gt;pNumberEditLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;descriptionTextBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="datePlacedDateTimePicker.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+  <data name="&gt;&gt;priceEditLbl.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="orderPlacedEditLbl.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="lNameLbl.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="idEditLbl.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;descEditLbl.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;dateEditLbl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pNumberEditLbl.Name" xml:space="preserve">
-    <value>pNumberEditLbl</value>
-  </data>
-  <data name="&gt;&gt;descEditLbl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="priceTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;idTextBox.Name" xml:space="preserve">
-    <value>idTextBox</value>
-  </data>
-  <data name="descriptionTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 152</value>
+  <data name="phoneNumberTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
   <data name="&gt;&gt;idTextBox.Parent" xml:space="preserve">
     <value>$this</value>
@@ -548,20 +116,452 @@
   <data name="phoneNumberTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>148, 102</value>
   </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 450</value>
+  </data>
+  <data name="&gt;&gt;saveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fNameLbl.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="descLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 155</value>
+  </data>
+  <data name="&gt;&gt;lastNameTextBox.Name" xml:space="preserve">
+    <value>lastNameTextBox</value>
+  </data>
+  <data name="&gt;&gt;pNumLbl.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;datePlacedDateTimePicker.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="&gt;&gt;descLbl.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;datePlacedDateTimePicker.Parent" xml:space="preserve">
+  <data name="&gt;&gt;phoneNumberTextBox.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;idTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;paidCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;descLbl.Name" xml:space="preserve">
+    <value>descLbl</value>
+  </data>
+  <data name="firstNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 44</value>
+  </data>
+  <data name="&gt;&gt;lNameEditLbl.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;dateEditLbl.Type" xml:space="preserve">
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>EditOrderForm</value>
+  </data>
+  <data name="fNameEditLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 41</value>
+  </data>
+  <data name="lastNameTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="priceTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;orderPlacedCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lNameLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;idLbl.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;phoneNumberTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;idLbl.Name" xml:space="preserve">
+    <value>idLbl</value>
+  </data>
+  <data name="&gt;&gt;descLbl.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="descriptionTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 152</value>
+  </data>
+  <data name="&gt;&gt;paidEditLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dateEditLbl.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
   <data name="&gt;&gt;idEditLbl.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
+  <data name="&gt;&gt;lNameLbl.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="idEditLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 29</value>
+  </data>
+  <data name="&gt;&gt;lNameEditLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;firstNameTextBox.Name" xml:space="preserve">
+    <value>firstNameTextBox</value>
+  </data>
+  <data name="orderPlacedCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;priceEditLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lNameLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 88</value>
+  </data>
+  <data name="&gt;&gt;idEditLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="fNameLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 59</value>
+  </data>
+  <data name="&gt;&gt;fNameEditLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="orderPlacedEditLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 297</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dateEditLbl.Name" xml:space="preserve">
+    <value>dateEditLbl</value>
+  </data>
+  <data name="&gt;&gt;dateEditLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="priceEditLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="cancelBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;priceEditLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;descEditLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="descLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="saveButton.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;paidEditLbl.Name" xml:space="preserve">
+    <value>paidEditLbl</value>
+  </data>
+  <data name="&gt;&gt;saveButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;fNameLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="fNameEditLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="paidCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="fNameLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;descriptionTextBox.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;orderPlacedEditLbl.Name" xml:space="preserve">
+    <value>orderPlacedEditLbl</value>
+  </data>
+  <data name="&gt;&gt;idTextBox.Name" xml:space="preserve">
+    <value>idTextBox</value>
+  </data>
+  <data name="datePlacedDateTimePicker.Location" type="System.Drawing.Point, System.Drawing">
+    <value>169, 347</value>
+  </data>
+  <data name="&gt;&gt;orderPlacedEditLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="datePlacedDateTimePicker.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;pNumberEditLbl.Name" xml:space="preserve">
+    <value>pNumberEditLbl</value>
+  </data>
+  <data name="&gt;&gt;datePlacedDateTimePicker.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fNameEditLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;descLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="idLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 18</value>
+  </data>
+  <data name="&gt;&gt;priceTextBox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;orderPlacedEditLbl.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;descriptionTextBox.Name" xml:space="preserve">
+    <value>descriptionTextBox</value>
+  </data>
+  <data name="&gt;&gt;orderPlacedCheckBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 89</value>
+  </data>
+  <data name="lNameLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;paidEditLbl.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;pNumberEditLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;priceTextBox.Name" xml:space="preserve">
+    <value>priceTextBox</value>
+  </data>
+  <data name="&gt;&gt;descEditLbl.Name" xml:space="preserve">
+    <value>descEditLbl</value>
+  </data>
+  <data name="&gt;&gt;descEditLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;datePlacedDateTimePicker.Name" xml:space="preserve">
+    <value>datePlacedDateTimePicker</value>
+  </data>
+  <data name="&gt;&gt;fNameEditLbl.Name" xml:space="preserve">
+    <value>fNameEditLbl</value>
+  </data>
+  <data name="&gt;&gt;cancelBtn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;idLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;firstNameTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="descriptionTextBox.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <data name="idEditLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lNameEditLbl.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="dateEditLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 353</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="priceEditLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 267</value>
+  </data>
+  <data name="descriptionTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;firstNameTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;datePlacedDateTimePicker.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="firstNameTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;saveButton.Name" xml:space="preserve">
+    <value>saveButton</value>
+  </data>
+  <data name="&gt;&gt;lastNameTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;priceTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;phoneNumberTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cancelBtn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;paidCheckBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;lNameLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cancelBtn.Name" xml:space="preserve">
+    <value>cancelBtn</value>
+  </data>
+  <data name="&gt;&gt;saveButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pNumberEditLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="pNumLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="paidEditLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 325</value>
+  </data>
+  <data name="&gt;&gt;lNameLbl.Name" xml:space="preserve">
+    <value>lNameLbl</value>
+  </data>
+  <data name="&gt;&gt;orderPlacedEditLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;firstNameTextBox.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="descEditLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 134</value>
+  </data>
+  <data name="dateEditLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;pNumLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lastNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 73</value>
+  </data>
+  <data name="descEditLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lNameEditLbl.Name" xml:space="preserve">
+    <value>lNameEditLbl</value>
+  </data>
+  <data name="pNumberEditLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 89</value>
+  </data>
+  <data name="idLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;idEditLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pNumLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 117</value>
+  </data>
+  <data name="&gt;&gt;fNameEditLbl.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;paidCheckBox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="paidEditLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;pNumLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lastNameTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="idTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="paidCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 326</value>
+  </data>
+  <data name="&gt;&gt;cancelBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fNameLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="saveButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>165, 420</value>
+  </data>
+  <data name="&gt;&gt;orderPlacedCheckBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;orderPlacedCheckBox.Name" xml:space="preserve">
+    <value>orderPlacedCheckBox</value>
+  </data>
+  <data name="&gt;&gt;lastNameTextBox.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;idEditLbl.Name" xml:space="preserve">
+    <value>idEditLbl</value>
+  </data>
+  <data name="priceTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 264</value>
+  </data>
+  <data name="&gt;&gt;descriptionTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="idTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 15</value>
+  </data>
+  <data name="&gt;&gt;priceTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lNameEditLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;paidEditLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;priceEditLbl.Name" xml:space="preserve">
+    <value>priceEditLbl</value>
+  </data>
+  <data name="&gt;&gt;idLbl.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 114</value>
+  </data>
+  <data name="&gt;&gt;dateEditLbl.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

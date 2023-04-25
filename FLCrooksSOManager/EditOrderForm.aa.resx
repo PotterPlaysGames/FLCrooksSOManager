@@ -71,6 +71,10 @@
   <data name="idEditLbl.Text" xml:space="preserve">
     <value>ID:</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="fNameLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
   <data name="fNameLbl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -79,6 +83,9 @@
   </data>
   <data name="fNameLbl.Text" xml:space="preserve">
     <value>First Name:</value>
+  </data>
+  <data name="lNameLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
   </data>
   <data name="lNameLbl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -89,6 +96,9 @@
   <data name="lNameLbl.Text" xml:space="preserve">
     <value>Last Name:</value>
   </data>
+  <data name="pNumLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
   <data name="pNumLbl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -98,6 +108,9 @@
   <data name="pNumLbl.Text" xml:space="preserve">
     <value>Phone Number:</value>
   </data>
+  <data name="descLbl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
   <data name="descLbl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -106,6 +119,9 @@
   </data>
   <data name="descLbl.Text" xml:space="preserve">
     <value>Description:</value>
+  </data>
+  <data name="idTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="idTextBox.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -119,6 +135,9 @@
   <data name="idTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
+  <data name="firstNameTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Right</value>
+  </data>
   <data name="firstNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>165, 56</value>
   </data>
@@ -127,6 +146,9 @@
   </data>
   <data name="firstNameTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
+  </data>
+  <data name="lastNameTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Right</value>
   </data>
   <data name="lastNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>165, 85</value>
@@ -137,6 +159,9 @@
   <data name="lastNameTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
+  <data name="phoneNumberTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Right</value>
+  </data>
   <data name="phoneNumberTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>165, 114</value>
   </data>
@@ -145,6 +170,9 @@
   </data>
   <data name="phoneNumberTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
+  </data>
+  <data name="descriptionTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
   </data>
   <data name="descriptionTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 173</value>
@@ -163,6 +191,9 @@
   </data>
   <data name="priceTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
+  </data>
+  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -197,7 +228,6 @@
   <data name="orderPlacedCheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="orderPlacedCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -251,6 +281,9 @@
   </data>
   <data name="cancelBtn.Text" xml:space="preserve">
     <value>Cancel</value>
+  </data>
+  <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>321, 484</value>
