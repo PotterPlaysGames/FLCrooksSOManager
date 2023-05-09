@@ -54,11 +54,11 @@ namespace FLCrooksSOManager
 
                 // Compare versions
                 Version latestVersion = new Version(latestRelease.TagName);
-                Version currentVersion = new Version("0.0.12");  // Replace with your current version
+                Version currentVersion = new Version("0.1.0");  // Replace with your current version
                 if (latestVersion > currentVersion)
                 {
                     // An update is available
-                    MessageBox.Show("Update available!");
+                    Console.WriteLine("Update available!");
 
                     // Download the update
                     string downloadUrl = latestRelease.Assets[0].BrowserDownloadUrl;  // Assuming the release has an asset to download
@@ -73,12 +73,12 @@ namespace FLCrooksSOManager
                 }
                 else
                 {
-                    MessageBox.Show("No updates available.");
+                    Console.WriteLine("No updates available.");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Failed to check for updates: {ex.Message}");
+                MessageBox.Show($"Please contact developer. Failed to check for updates: {ex.Message}");
             }
         }
 
@@ -94,7 +94,7 @@ namespace FLCrooksSOManager
                     this.Close();
 
                     // Step 3: Start the installation process
-                    Process.Start("msiexec.exe", $"/i \"{updateFilePath}\"");
+                    Process.Start("msiexec.exe", $"/i \"{updateFilePath}\" /norestart").WaitForExit();
 
                     // Step 4: Restart the program
                     Process.Start(@"C:\Program Files\FLCrooks\FLCrooks Speical Order Manager\FLCrooksSOManager.exe");
@@ -102,7 +102,7 @@ namespace FLCrooksSOManager
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Failed to install update: {ex.Message}");
+                MessageBox.Show($"Please contact developer. Failed to install update: {ex.Message}");
             }
         }
 
