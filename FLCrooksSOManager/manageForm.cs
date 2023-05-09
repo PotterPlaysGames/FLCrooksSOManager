@@ -1,19 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.Collections;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
-using System.Xml.Serialization;
-using static FLCrooksSOManager.manageForm;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace FLCrooksSOManager
 {
@@ -70,9 +58,9 @@ namespace FLCrooksSOManager
                 orderList = orderList.Where(order =>
                     (isNumericId && order.ID == id) ||                            // Search by ID
                     (long.TryParse(searchTerm, out phoneNumber) && order.PhoneNumber.Contains(searchTerm)) ||  // Search by phone number
-                    order.FirstName.Contains(searchTerm) ||
-                    order.LastName.Contains(searchTerm) ||
-                    order.Description.Contains(searchTerm)
+                    order.FirstName.ToLower().Contains(searchTerm.ToLower()) ||
+                    order.LastName.ToLower().Contains(searchTerm.ToLower()) ||
+                    order.Description.ToLower().Contains(searchTerm.ToLower())
                 ).ToList();
             }
 
