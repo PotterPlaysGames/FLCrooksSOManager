@@ -77,7 +77,7 @@
             // 
             // newOrderBtn
             // 
-            newOrderBtn.Anchor = AnchorStyles.Right;
+            newOrderBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             newOrderBtn.AutoSize = true;
             newOrderBtn.Cursor = Cursors.Hand;
             newOrderBtn.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
@@ -91,7 +91,7 @@
             // 
             // manageBtn
             // 
-            manageBtn.Anchor = AnchorStyles.Left;
+            manageBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             manageBtn.AutoSize = true;
             manageBtn.Cursor = Cursors.Hand;
             manageBtn.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
@@ -105,9 +105,8 @@
             // 
             // mainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(800, 450);
             Controls.Add(manageBtn);
@@ -118,7 +117,6 @@
             Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
-            MaximumSize = new Size(1000, 500);
             MinimumSize = new Size(816, 489);
             Name = "mainForm";
             Text = "F.L. Crooks S.O.M.S";

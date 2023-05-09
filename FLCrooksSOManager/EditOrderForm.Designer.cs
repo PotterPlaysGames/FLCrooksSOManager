@@ -150,7 +150,7 @@
             // EditOrderForm
             // 
             resources.ApplyResources(this, "$this");
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackColor = SystemColors.AppWorkspace;
             Controls.Add(cancelBtn);
             Controls.Add(saveButton);

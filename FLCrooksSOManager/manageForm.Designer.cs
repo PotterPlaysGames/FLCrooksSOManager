@@ -42,6 +42,8 @@
             Placed = new ColumnHeader();
             Description = new ColumnHeader();
             deleteBtn = new Button();
+            searchBox = new TextBox();
+            searchLbl = new Label();
             SuspendLayout();
             // 
             // newOrderBtnMgr
@@ -149,12 +151,32 @@
             deleteBtn.UseVisualStyleBackColor = true;
             deleteBtn.Click += deleteBtn_Click;
             // 
+            // searchBox
+            // 
+            searchBox.Anchor = AnchorStyles.Top;
+            searchBox.Location = new Point(281, 46);
+            searchBox.Name = "searchBox";
+            searchBox.Size = new Size(346, 23);
+            searchBox.TabIndex = 6;
+            searchBox.TextChanged += searchBox_TextChanged;
+            // 
+            // searchLbl
+            // 
+            searchLbl.AutoSize = true;
+            searchLbl.Location = new Point(225, 49);
+            searchLbl.Name = "searchLbl";
+            searchLbl.Size = new Size(45, 15);
+            searchLbl.TabIndex = 7;
+            searchLbl.Text = "Search:";
+            // 
             // manageForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(903, 442);
+            Controls.Add(searchLbl);
+            Controls.Add(searchBox);
             Controls.Add(deleteBtn);
             Controls.Add(listView1);
             Controls.Add(editBtn);
@@ -183,5 +205,7 @@
         private ColumnHeader Paid;
         private ColumnHeader Description;
         private Button deleteBtn;
+        private TextBox searchBox;
+        private Label searchLbl;
     }
 }
