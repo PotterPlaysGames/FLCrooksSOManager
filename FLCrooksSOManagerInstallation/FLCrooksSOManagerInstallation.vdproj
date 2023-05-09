@@ -199,15 +199,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:FLCrooks Speical Order Manager"
-        "ProductCode" = "8:{214DB2DB-3A07-4D2B-B734-7110D02F046E}"
-        "PackageCode" = "8:{179EB768-9BE6-4CD6-907C-D88871136463}"
+        "ProductCode" = "8:{09532982-14E4-489C-8D83-260485527806}"
+        "PackageCode" = "8:{FF718822-AF69-4894-8415-A07A4A537994}"
         "UpgradeCode" = "8:{D532FA4F-009C-4566-86C9-D8114191EFAB}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:0.0.0010"
+        "ProductVersion" = "8:0.0.0011"
         "Manufacturer" = "8:FLCrooks"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -735,7 +735,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_5D07E0AA46F8475AB64E38D9B99B5F99"
             {
-            "SourcePath" = "8:..\\FLCrooksSOManager\\obj\\Release\\net6.0-windows\\apphost.exe"
+            "SourcePath" = "8:..\\FLCrooksSOManager\\obj\\Debug\\net6.0-windows\\apphost.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C4E603BAB0F8474A8B39AB6910D3242E"
