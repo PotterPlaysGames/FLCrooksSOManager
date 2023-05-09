@@ -1,4 +1,6 @@
-﻿namespace FLCrooksSOManager
+﻿using System.Windows.Forms.VisualStyles;
+
+namespace FLCrooksSOManager
 {
     partial class settingsForm
     {
@@ -28,111 +30,92 @@
         /// </summary>
         private void InitializeComponent()
         {
-            settingsTabs = new TabControl();
-            appInfo = new TabPage();
-            updateTab = new TabPage();
-            updateAvTxt = new Label();
-            newVerLblTxt = new Label();
-            newVersionLbl = new Label();
-            updateBtn = new Button();
-            prevVerLblTxt = new Label();
-            curVersionLbl = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(settingsForm));
             bw_updateChecker = new System.ComponentModel.BackgroundWorker();
-            settingsTabs.SuspendLayout();
-            updateTab.SuspendLayout();
+            groupBox1 = new GroupBox();
+            button1 = new Button();
+            buildLbl = new Label();
+            authorNameLbl = new Label();
+            titleLbl = new Label();
+            authorLbl = new Label();
+            versionLbl = new Label();
+            groupBox1.SuspendLayout();
             SuspendLayout();
-            // 
-            // settingsTabs
-            // 
-            settingsTabs.Controls.Add(appInfo);
-            settingsTabs.Controls.Add(updateTab);
-            settingsTabs.Location = new Point(12, 12);
-            settingsTabs.Name = "settingsTabs";
-            settingsTabs.SelectedIndex = 0;
-            settingsTabs.Size = new Size(377, 426);
-            settingsTabs.TabIndex = 1;
-            // 
-            // appInfo
-            // 
-            appInfo.Location = new Point(4, 24);
-            appInfo.Name = "appInfo";
-            appInfo.Size = new Size(369, 398);
-            appInfo.TabIndex = 0;
-            appInfo.Text = "App Info";
-            appInfo.UseVisualStyleBackColor = true;
-            // 
-            // updateTab
-            // 
-            updateTab.Controls.Add(updateAvTxt);
-            updateTab.Controls.Add(newVerLblTxt);
-            updateTab.Controls.Add(newVersionLbl);
-            updateTab.Controls.Add(updateBtn);
-            updateTab.Controls.Add(prevVerLblTxt);
-            updateTab.Controls.Add(curVersionLbl);
-            updateTab.Location = new Point(4, 24);
-            updateTab.Name = "updateTab";
-            updateTab.Size = new Size(369, 398);
-            updateTab.TabIndex = 1;
-            updateTab.Text = "Update";
-            updateTab.UseVisualStyleBackColor = true;
-            // 
-            // updateAvTxt
-            // 
-            updateAvTxt.AutoSize = true;
-            updateAvTxt.Location = new Point(81, 283);
-            updateAvTxt.Name = "updateAvTxt";
-            updateAvTxt.Size = new Size(0, 15);
-            updateAvTxt.TabIndex = 5;
-            // 
-            // newVerLblTxt
-            // 
-            newVerLblTxt.AutoSize = true;
-            newVerLblTxt.Location = new Point(129, 172);
-            newVerLblTxt.Name = "newVerLblTxt";
-            newVerLblTxt.Size = new Size(0, 15);
-            newVerLblTxt.TabIndex = 4;
-            // 
-            // newVersionLbl
-            // 
-            newVersionLbl.AutoSize = true;
-            newVersionLbl.Location = new Point(132, 117);
-            newVersionLbl.Name = "newVersionLbl";
-            newVersionLbl.Size = new Size(72, 15);
-            newVersionLbl.TabIndex = 3;
-            newVersionLbl.Text = "New Version:";
-            // 
-            // updateBtn
-            // 
-            updateBtn.Enabled = false;
-            updateBtn.Location = new Point(129, 211);
-            updateBtn.Name = "updateBtn";
-            updateBtn.Size = new Size(75, 23);
-            updateBtn.TabIndex = 2;
-            updateBtn.Text = "Update";
-            updateBtn.UseVisualStyleBackColor = true;
-            updateBtn.Click += updateBtn_Click;
-            // 
-            // prevVerLblTxt
-            // 
-            prevVerLblTxt.AutoSize = true;
-            prevVerLblTxt.Location = new Point(129, 63);
-            prevVerLblTxt.Name = "prevVerLblTxt";
-            prevVerLblTxt.Size = new Size(0, 15);
-            prevVerLblTxt.TabIndex = 1;
-            // 
-            // curVersionLbl
-            // 
-            curVersionLbl.AutoSize = true;
-            curVersionLbl.Location = new Point(129, 42);
-            curVersionLbl.Name = "curVersionLbl";
-            curVersionLbl.Size = new Size(86, 15);
-            curVersionLbl.TabIndex = 0;
-            curVersionLbl.Text = "Current Version:";
             // 
             // bw_updateChecker
             // 
             bw_updateChecker.DoWork += bw_updateChecker_DoWork;
             bw_updateChecker.RunWorkerCompleted += backgroundWorker1_RunWorkerCompleted;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(buildLbl);
+            groupBox1.Controls.Add(authorNameLbl);
+            groupBox1.Controls.Add(titleLbl);
+            groupBox1.Controls.Add(authorLbl);
+            groupBox1.Controls.Add(versionLbl);
+            groupBox1.Location = new Point(48, 12);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(303, 166);
+            groupBox1.TabIndex = 3;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "App Info";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(109, 112);
+            button1.Name = "button1";
+            button1.Size = new Size(118, 23);
+            button1.TabIndex = 5;
+            button1.Text = "Check for updates?";
+            button1.UseVisualStyleBackColor = true;
+            button1.Visible = false;
+            // 
+            // buildLbl
+            // 
+            buildLbl.AutoSize = true;
+            buildLbl.Location = new Point(151, 94);
+            buildLbl.Name = "buildLbl";
+            buildLbl.Size = new Size(0, 15);
+            buildLbl.TabIndex = 4;
+            buildLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // authorNameLbl
+            // 
+            authorNameLbl.AutoSize = true;
+            authorNameLbl.Location = new Point(132, 70);
+            authorNameLbl.Name = "authorNameLbl";
+            authorNameLbl.Size = new Size(69, 15);
+            authorNameLbl.TabIndex = 3;
+            authorNameLbl.Text = "Aidan Potter";
+            // 
+            // titleLbl
+            // 
+            titleLbl.AutoSize = true;
+            titleLbl.Location = new Point(67, 29);
+            titleLbl.Name = "titleLbl";
+            titleLbl.Size = new Size(172, 15);
+            titleLbl.TabIndex = 2;
+            titleLbl.Text = "FL Crooks Speical Order Manager";
+            // 
+            // authorLbl
+            // 
+            authorLbl.AutoSize = true;
+            authorLbl.Location = new Point(41, 70);
+            authorLbl.Name = "authorLbl";
+            authorLbl.Size = new Size(45, 15);
+            authorLbl.TabIndex = 1;
+            authorLbl.Text = "Author:";
+            // 
+            // versionLbl
+            // 
+            versionLbl.AutoSize = true;
+            versionLbl.Location = new Point(41, 94);
+            versionLbl.Name = "versionLbl";
+            versionLbl.Size = new Size(46, 15);
+            versionLbl.TabIndex = 0;
+            versionLbl.Text = "Version:";
             // 
             // settingsForm
             // 
@@ -140,29 +123,26 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(401, 450);
-            Controls.Add(settingsTabs);
+            Controls.Add(groupBox1);
             Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
             Name = "settingsForm";
             Text = "Settings";
             Load += settingsForm_Load;
-            settingsTabs.ResumeLayout(false);
-            updateTab.ResumeLayout(false);
-            updateTab.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private TabControl settingsTabs;
-        private TabPage appInfo;
-        private TabPage updateTab;
-        private Label prevVerLblTxt;
-        private Label curVersionLbl;
-        private Label newVerLblTxt;
-        private Label newVersionLbl;
-        private Button updateBtn;
-        private Label updateAvTxt;
         private System.ComponentModel.BackgroundWorker bw_updateChecker;
+        private GroupBox groupBox1;
+        private Label buildLbl;
+        private Label authorNameLbl;
+        private Label titleLbl;
+        private Label authorLbl;
+        private Label versionLbl;
+        private Button button1;
     }
 }
