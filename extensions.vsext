@@ -1,0 +1,24 @@
+{
+  "id": "d9e56efc-a777-4d63-b96a-eab8a49fdae1",
+  "name": "My Visual Studio extensions",
+  "description": "A collection of my Visual Studio extensions",
+  "version": "1.0",
+  "extensions": [
+    {
+      "name": "Live Share 2022",
+      "vsixId": "Microsoft.VisualStudio.LiveShare.2022"
+    },
+    {
+      "name": "Microsoft Visual Studio Installer Projects 2022",
+      "vsixId": "VSInstallerProjects2022"
+    },
+    {
+      "name": "ML.NET Model Builder 2022",
+      "vsixId": "A274A0E2-E41E-40CC-A694-8D5D14BBD2D0"
+    },
+    {
+      "name": "Single-project MSIX Packaging Tools for VS 2022",
+      "vsixId": "Microsoft.SingleProjectMSIXPackagingTools.Dev17"
+    }
+  ]
+}
